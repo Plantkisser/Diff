@@ -1,3 +1,5 @@
+#pragma once
+
 # define CHECKRES(res, ret, name, file, error_value)\
 	if (res == error_value)\
 	{\
@@ -27,3 +29,10 @@
 		printf("Houston we have problem\n akin is a nullptr in change_record\n");\
 		return ret;\
 	}
+
+
+
+
+
+
+	
