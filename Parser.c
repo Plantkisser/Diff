@@ -51,7 +51,7 @@ char* change_record(FILE* fdata, FILE* log)
 	}
 	free(str);
 	buf[ipb] = '\0';
-	//printf("%s\n", buf);
+
 	return buf;
 }
 
@@ -61,7 +61,6 @@ struct math* read_str(char* str, struct math* tree, FILE* log)
 	CHECK_LOG(log, NULL)
 
 
-	//printf("%s\n", str);
 	CHECK_NULL_ARG(str, read_str, NULL, log)
 
 
@@ -82,7 +81,7 @@ struct math* read_str(char* str, struct math* tree, FILE* log)
 	{
 		tree = add_node(tree, str[0], CONST_AND_VAR, log);
 		CHECKRES(tree, NULL, read_str, log, NULL)
-		//printf("VAR %s\n", str);
+		
 
 		return tree;
 	}
@@ -116,7 +115,6 @@ struct math* read_str(char* str, struct math* tree, FILE* log)
 	CHECKNULL(buf, NULL, log)
 
 
-	//printf("%d\n", *ptr);
 
 	tree = add_node(tree, (int) *ptr, SIGN, log);
 	CHECKRES(tree, NULL, read_str, log, NULL)
